@@ -1,24 +1,55 @@
 # 1) O vetor peso indica o peso médio (em gramas) de pintinhos com 2,4,6,8 e 10 dias de nascidos,
-# respectivamente.
-# peso<-c(42,51,59,64,76)
-# Considere cada tempo de nascido como sendo uma categoria. Estabeleça um gráfico de barras
-# para o peso médio dos pintinhos em cada categoria. Coloque título, limite de y até 100 e nomes
-# nos eixos.
+#    respectivamente.
+#
+#    peso<-c(42,51,59,64,76)
+#
+#    Considere cada tempo de nascido como sendo uma categoria. Estabeleça um gráfico de barras
+#    para o peso médio dos pintinhos em cada categoria. Coloque título, limite de y até 100 e nomes
+#    nos eixos.
+peso <- c(42, 51, 59, 64, 76)
+names(peso) <-c("2", "4", "6", "8", "10")
+barplot(
+  peso,
+  main = "Peso médio pintinhos p/ dias",
+  xlab = "Dias",
+  ylab = "Peso médio (g)",
+  ylim = c(0,100)
+)
 
 # 2) Refaça o gráfico da questão anterior usando as cores: azul, rosa, amarelo, verde e vermelho.
+barplot(
+  peso,
+  main = "Peso médio pintinhos p/ dias",
+  xlab = "Dias",
+  ylab = "Peso médio",
+  ylim = c(0,100),
+  col = c("blue", "pink", "yellow", "green", "red")
+)
 
 # 3) Numa central telefônica de uma empresa havia a sensação de saturação do sistema utilizado.
-# Para melhor representar o que ocorria foi realizado um acompanhamento com as telefonistas,
-# que teriam que responder aos problemas e em que números ocorriam e lançá-los na Lista e
-# verificação. A tabela abaixo resume os dados dessa lista. Apresente um gráfico em barras para
-# esses dados, com barras verticais, com sombreamento de densidade 80 e ângulo das linhas
-# de 120 graus.
-# Tipo de defeito Número de ocorrências
-# Linha ruidosa 250
-# Linha aberta 110
-# Alarme 85
-# Não responde 45
-# Não toca 25
+#    Para melhor representar o que ocorria foi realizado um acompanhamento com as telefonistas,
+#    que teriam que responder aos problemas e em que números ocorriam e lançá-los na Lista e
+#    verificação. A tabela abaixo resume os dados dessa lista. Apresente um gráfico em barras para
+#    esses dados, com barras verticais, com sombreamento de densidade 80 e ângulo das linhas
+#    de 120 graus.
+#    
+#    Tipo de defeito  Número de ocorrências
+#    Linha ruidosa    250
+#    Linha aberta     110
+#    Alarme           85
+#    Não responde     45
+#    Não toca         25
+defeitos <- c(250, 110, 85, 45, 25)
+barplot(
+  defeitos,
+  main = "Saturação do sistema",
+  xlab = "Tipo de defeito",
+  ylab = "Número de ocorrências",
+  density = 80,
+  angle = 120,
+  col = c("blue", "pink", "yellow", "green", "red"),
+  legend.text = c("Linha ruidosa", "Linha aberta", "Alarme", "Não responde", "Não toca")
+)
 
 # 4) Uma pesquisa para quantificar a população de macacos foi realizada em determinada região e
 # os resultados estão abaixo, em forma de vetores:
